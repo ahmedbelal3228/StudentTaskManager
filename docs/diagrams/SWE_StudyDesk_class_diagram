@@ -1,0 +1,66 @@
+@startuml
+
+class Task {
+    - name: String
+    - completed: Boolean
+    - subject: Subject [0..1]
+    - scheduleDate: Date [0..1]
+    - subTasks: List<Task>
+    - priority: enPriority
+    - description: String
+
+    + reopen(): void
+    + mark_completed(): void
+    + add_subtask(name: String): Task
+    + delete_subtask(subtask: Task): void
+    + change_date(newDate: Date): void
+    + clear_date(): void
+    + rename(newName: String): void
+    + change_description(text: String): void
+    + change_priority(priority: enPriority): void
+}
+
+class Subject {
+    - name: String
+    - tasks: List<Task>
+
+    + add_task(task: Task): void
+    + remove_task(task: Task): void
+    + rename(newName: String): void
+}
+
+enum enPriority {
+    High
+    Medium
+    Low
+    None
+}
+
+class TaskManager {
+    - tasks: List<Task>
+    - subjects: List<Subject>
+
+    + add_task(task: Task, subject: Subject [0..1]): void
+    + move_task(task: Task, subject: Subject [0..1]): void
+    + delete_task(task: Task): void
+
+    + get_tasks(): List<Task>
+    + get_tasks_by_date(date: Date): List<Task>
+    + get_tasks_by_priority(priority: enPriority): List<Task>
+    + get_tasks_by_subject(subject: Subject [0..1]): List<Task>
+
+    + add_subject(subject: Subject): void
+    + delete_subject(subject: Subject): void
+}
+
+' Tasks survive deletion of their subject.
+Subject "0..1" o-- "0..*" Task : groups
+
+' Each task has at most one parent and may own many subtasks.
+Task "0..1" *-- "0..*" Task : contains
+
+' The manager tracks all tasks and subjects.
+TaskManager "1" -- "0..*" Subject : manages
+TaskManager "1" -- "0..*" Task : manages
+
+@enduml

@@ -1,0 +1,23 @@
+# Generated build output
+**/bin/
+**/obj/
+
+# Local IDE settings
+.idea/
+.vs/
+*.user
+*.suo
+
+# macOS folder metadata
+.DS_Store# Generated build output
+**/bin/
+**/obj/
+
+# Local IDE settings
+.idea/
+.vs/
+*.user
+*.suo
+
+# macOS folder metadata
+.DS_Store

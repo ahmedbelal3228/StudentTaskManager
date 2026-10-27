@@ -1,0 +1,51 @@
+@startuml
+left to right direction
+
+
+actor Student 
+
+
+rectangle "SudyDesk" {
+
+usecase "Add Task" as add_task
+usecase "Edit Task" as edit_task
+usecase "Delete Task" as delete_task
+
+usecase "Schedule Task" as schedule_task
+usecase "Add Subtask" as add_subtask 
+usecase "Move Task" as move_task
+usecase "View Tasks" as view_tasks
+usecase "Mark Completed" as mark_completed
+
+usecase "Add Subject" as add_subject 
+usecase "Delete Subject" as delete_subject 
+
+ 
+}
+
+
+Student -- add_task 
+Student -- edit_task
+Student -- delete_task
+Student -- schedule_task
+Student -- add_subtask 
+Student -- view_tasks
+Student -- mark_completed
+Student -- add_subject
+Student -- delete_subject
+Student -- move_task
+ 
+schedule_task ...> add_task : <<extend>>
+
+
+
+
+note bottom of add_task
+A task can be created without a date
+end note
+
+note bottom of delete_subject
+Deleting a subject won't delete its tasks
+end note
+
+@enduml

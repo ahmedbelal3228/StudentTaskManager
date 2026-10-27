@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentTaskManager.ConsoleApp", "StudentTaskManager.ConsoleApp\StudentTaskManager.ConsoleApp.csproj", "{076699CF-BEA5-4CEB-9FC7-EF9EE37DC9F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentTaskManager.Core", "StudentTaskManager.Core\StudentTaskManager.Core.csproj", "{CC169D49-547C-487B-80F3-4CC0C9388E31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{076699CF-BEA5-4CEB-9FC7-EF9EE37DC9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076699CF-BEA5-4CEB-9FC7-EF9EE37DC9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076699CF-BEA5-4CEB-9FC7-EF9EE37DC9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076699CF-BEA5-4CEB-9FC7-EF9EE37DC9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC169D49-547C-487B-80F3-4CC0C9388E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC169D49-547C-487B-80F3-4CC0C9388E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC169D49-547C-487B-80F3-4CC0C9388E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC169D49-547C-487B-80F3-4CC0C9388E31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
